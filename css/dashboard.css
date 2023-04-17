@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,300;1,400&family=Ubuntu:ital,wght@0,500;0,700;1,300;1,400;1,500&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 17px;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: #DDF7E3;
+}
+
+header {
+  background: #5D9C59;
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  z-index: 10;
+}
+header .logo {
+  position: absolute;
+  margin-top: 10px;
+  cursor: pointer;
+  left: 40px;
+}
+header .logo img {
+  width: 50px;
+  left: 46px;
+}
+header .logo #homeButton {
+  display: none;
+  position: absolute;
+  right: 17px;
+  font-size: 31px;
+  border: 0px solid #FFF;
+  background: transparent;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+header .logo #homeButton:hover {
+  border: 0.2px solid #FFF;
+}
+header nav {
+  display: grid;
+  place-content: center end;
+  margin-right: 40px;
+  background: #5D9C59;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+}
+header nav ul .active {
+  border-bottom: 0.21px solid #C7E8CA;
+}
+header nav ul li a {
+  color: #DDF7E3;
+  text-decoration-line: none;
+  color: black;
+}
+header nav ul li a:hover {
+  cursor: pointer;
+  color: #DDF7E3;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 80px 10px 10px 10px;
+  background: #DDF7E3;
+}
+main p, main ins {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+main ins {
+  cursor: help;
+}
+main .search-box {
+  margin-top: 20px;
+  position: relative;
+  max-width: 310px;
+  border: 0.5px solid #5D9C59;
+  padding: 2px;
+  border-radius: 5px;
+}
+main .search-box span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 17px;
+  background: #DDF7E3;
+  border-radius: 5px;
+  width: 80px;
+  cursor: text;
+}
+main .search-box .span-active {
+  top: -10px;
+  font-size: 13px;
+  padding-left: 13px;
+}
+main .search-box input, main .search-box select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px solid #DDF7E3;
+  background: #DDF7E3;
+  outline: none;
+}
+main .search-box button {
+  border: 0px solid #5D9C59;
+  background: #DDF7E3;
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  padding: 11px 6px;
+}
+main .search-box button:hover {
+  border: 0px solid #5D9C59;
+}
+main .table, main .calendar {
+  overflow-x: auto;
+  width: 100%;
+  padding: 5px 0px;
+}
+main .table table tbody tr td, main .calendar table tbody tr td {
+  width: 180px;
+}
+main .table table tbody tr .no, main .calendar table tbody tr .no {
+  text-align: center;
+  width: 40px;
+}
+main .table table tbody tr .no a, main .calendar table tbody tr .no a {
+  cursor: pointer;
+  color: #5D9C59;
+}
+main .table table tbody tr .activities, main .calendar table tbody tr .activities {
+  width: 400px;
+  text-align: justify;
+}
+main .table table tbody tr .activities p, main .calendar table tbody tr .activities p {
+  margin: 0px !important;
+}
+main .table table tbody tr details, main .calendar table tbody tr details {
+  cursor: pointer;
+}
+main .table table tbody tr th, main .calendar table tbody tr th {
+  width: 60px;
+}
+main .table table tbody tr th button, main .calendar table tbody tr th button {
+  border: 0px solid #5D9C59;
+  background: #DDF7E3;
+  cursor: pointer;
+  animation: all 0.5s ease;
+}
+main .table table tbody tr td[contenteditable=true], main .calendar table tbody tr td[contenteditable=true] {
+  background: #C7E8CA;
+  color: #ca2d2d;
+}
+main .table table tobdy > *, main .calendar table tobdy > * {
+  font-size: 15px;
+}
+main .table table tfoot tr td ul, main .calendar table tfoot tr td ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 5px 5px;
+}
+main .table table tfoot tr td ul li, main .calendar table tfoot tr td ul li {
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+main .table table tfoot tr td ul li:hover, main .calendar table tfoot tr td ul li:hover {
+  background: #C7E8CA;
+}
+main .calendar table tbody tr td {
+  height: 170px;
+  width: 150px;
+}
+main .calendar table tbody tr td h1 {
+  font-size: 24px;
+}
+main .calendar table tbody tr td button {
+  margin-top: 20px;
+  bottom: 10px;
+  right: 10px;
+  background: #5D9C59;
+  color: #DDF7E3;
+  border: 0px solid #DDF7E3;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+main .create-request {
+  text-align: right;
+  padding-right: 10px;
+}
+main .create-request a {
+  color: #5D9C59;
+}
+main .pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+main .pagination ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 5px 5px;
+}
+main .pagination ul li {
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+main .pagination ul li:hover {
+  background: #C7E8CA;
+}
+main table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+main td, main th {
+  border: 0.4px solid #5D9C59;
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    left: 0px !important;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }
+  .logo #homeButton {
+    display: block !important;
+  }
+  header .open {
+    display: grid !important;
+  }
+  header nav {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    border-top: 0.2px solid #C7E8CA;
+  }
+  header nav ul {
+    display: block !important;
+    width: 100%;
+    text-align: right;
+  }
+  header nav ul li {
+    padding: 22px 50px;
+  }
+  header nav ul .active {
+    border-bottom: 0px solid #C7E8CA !important;
+    color: #dbc07e;
+  }
+  main {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+  main .search-box {
+    width: 97%;
+    max-width: none;
+  }
+  main .search-box input {
+    width: -webkit-fill-available;
+  }
+}
+
+/*# sourceMappingURL=dashboard.css.map */

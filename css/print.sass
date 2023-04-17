@@ -1,0 +1,140 @@
+$color : #f5f2f2
+$bg : #0a2203
+$preview : #cd5555
+$nameColor :#006838
+    
+*
+    margin: 0px
+    padding: 0px
+    font-family: 'Roboto', sans-serif
+.printcard
+    display: flex
+
+.card
+        display: flex
+        flex-wrap: wrap
+        gap: 3px
+
+        .preview
+            width: 3.558in
+            height: 5.47in
+            border: 1px solid $bg
+            position: relative
+            display: grid
+            place-items: center
+            
+            #picture
+                width: 203px
+                height: 205px
+                position: absolute
+                top: 119px
+                z-index: -2
+                left: 69px
+                background: #fff
+
+            .finishing
+                height: 100%
+                width: 100%
+                position: absolute
+                z-index: 1000
+            h3
+                border: 3px solid $preview
+                width: 300px
+                height: 300px
+                color: $preview
+                font-size: 67px
+                display: grid
+                place-content: center
+                border-radius: 50%
+            img
+                position: absolute
+                top: -1px
+                left: -2px
+                z-index: -1
+
+            label[preview=firstname]
+                width: 100%
+                text-transform: uppercase
+                text-align: center
+                font-size: 29px
+                font-weight: 700
+                position: absolute
+                top: 366px
+                z-index: -1
+                color: $nameColor
+
+            label[preview=lastName]
+                width: 100%
+                text-transform: uppercase
+                text-align: center
+                font-size: 29px
+                font-weight: 700
+                position: absolute
+                top: 400px
+                z-index: -1
+                color: $nameColor
+            
+            label[preview=id]
+                width: 100%
+                text-transform: uppercase
+                text-align: left
+                font-size: 10.02pt
+                font-weight: 700
+                position: absolute
+                top: 342px
+                z-index: -1
+                color: #231f20
+                left : 177px
+
+            label[preview=position]
+                width: 100%
+                text-transform: uppercase
+                text-align: center
+                font-size: 8.02pt
+                font-weight: bold
+                position: absolute
+                top: 452px
+                z-index: -1
+                color: #231f20
+                width: 300px
+
+            label[preview=section]
+                width: 175px
+                text-transform: uppercase
+                text-align: center
+                font-size: 7.5pt
+                font-weight: bold
+                position: absolute
+                top: 470px
+                z-index: -1
+                color: #231f20
+
+            #qrcode,#qrcode2
+                position: absolute
+                top: 453px
+                width: 57px
+                height: 57px
+                left: 20px
+                border: 0px solid $bg
+                color : $bg 
+                font-size: 10px
+                display: grid
+                place-content: center
+                img
+                    width: 57px
+                    height: 57px
+#timer
+    position: fixed
+    top: 20px
+    left: 20px
+    font-size: 63px
+    color: $preview
+button
+    margin: 10px
+    padding: 3px 5px
+    font-size: 17px
+    cursor: pointer
+
+@media print
+    button,#timer,p
+        display: none

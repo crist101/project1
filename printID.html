@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print ID</title>
+    <link rel="stylesheet" href="css/print.css">
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="shortcut icon" href="https://doctracklite.buplant.da.gov.ph/static/src/logo.svg" type="image/x-icon">   
+</head>
+<body>
+    <div class="printcard">
+        <div class="card"> 
+            <div class="preview">
+                <img src="image/idv2.png" alt="Id">
+                <label preview="firstname">Juan</label>
+                <label preview="lastName">Dela Cruz</label>
+                <label preview="id">100001</label>
+                <label preview="position">Computer Programmer II</label>
+                <label preview="section">Information and Computer Section</label>
+                <img id="picture" src="image/picture.jpg" alt="Profile" draggable="false">
+                <div id="qrcode">
+                    QR-CODE 
+                </div>
+                <div class="finishing">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="preview">
+                <img src="image/idv2.png" alt="Id">
+                <label preview="firstname">Juan</label>
+                <label preview="lastName">Dela Cruz</label>
+                <label preview="id">100001</label>
+                <label preview="position">Computer Programmer II</label>
+                <label preview="section">Information and Computer Section</label>
+                <img id="picture" src="image/picture.jpg" alt="Profile" draggable="false">
+                <div id="qrcode2">
+                    QR-CODE 
+                </div>
+                <div class="finishing">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timer">
+        <h1>--:--</h1>
+    </div>
+    <p><b>Note:</b>Kindly use your computer/laptop to print your ID.</p>
+    <button>Print ID</button>
+    <script src="js/print.js"></script>
+</body>
+</html>

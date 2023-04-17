@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" href="https://doctracklite.buplant.da.gov.ph/static/src/logo.svg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/device.png" alt="">
+            <button id="homeButton" toggle="True">&#9776;</button>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#Dashboard">Dashboard</a></li>
+                <li><a href="#resetPassword">Reset Password</a></li>
+                <li> <a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome Juan!</h1>
+        <p>Your office is set to <ins> Director's office</ins></p>
+
+        <h1>Requested Form</h1>
+        <div class="search-box" title="Please enter space to search">
+            <span for="search">Search</span>
+            <input type="search" name="search" id="search">
+            <button>Go</button>
+        </div>
+        <p class="create-request">
+            <a href="registration.html">Request ID</a>
+        </p>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            No
+                        </th>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            Remarks
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="no">1234422</td>
+                        <td>Juan</td>
+                        <td>Dela Cruz</td>
+                        <td class="activities">
+                        </th>
+                        <th>
+                            Pending
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="no">2</td>
+                        <td class="no"><a href="registration.html">100001</a></td>
+                        <td>Mar Jan</td>
+                        <td>Cargo</td>
+                        <td class="activities">
+                            <summary>Juan Dela Cruz</summary>
+                            <p>Kindly change the position of the application</p>
+                        </td>
+                        <th>
+                            Re-Submit 
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="no">2</td>
+                        <td class="no"><a>100001</a></td>
+                        <td>Mar Jan</td>
+                        <td>Cargo</td>
+                        <td class="activities">
+                            <summary>Ready for printing</summary>
+                            <p>
+                                <b>Note:</b>
+                                Your request is already approved, Once you've click the url you have 10 min to print it. <a href="printID.html" target="_print">Print ID</a>
+                            </p>
+                        </td>
+                        <th>
+                            Approved
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="no">2</td>
+                        <td class="no"><a>100001</a></td>
+                        <td>Mar Jan</td>
+                        <td>Cargo</td>
+                        <td class="activities">
+                            <summary>Ready for printing</summary>
+                            <p>
+                                <b>Note:</b>
+                                Your request is already approved, But the link we provided is already expired. <a href="#Re-Print">Request for re-printing ID</a>
+                            </p>
+                        </td>
+                        <th>
+                            Approved
+                        </th>
+                    </tr>
+            </table>
+        </div>
+        <!--
+        <div class="pagination" >
+            <ul>
+                <li>First Page</li>
+                <li><</li>
+                <li>5</li>
+                <li>></li>
+                <li>Last Page</li>
+            </ul>
+        </div>
+        <h1>Calendar Activity Records</h1>
+        <div class="calendar">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody id="calendayList">
+                    <tr>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        -->
+    </main>
+    <script src="js/dashboard.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

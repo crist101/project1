@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" href="https://doctracklite.buplant.da.gov.ph/static/src/logo.svg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/device.png" alt="">
+            <button id="homeButton" toggle="True">&#9776;</button>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#Dashboard">Dashboard</a></li>
+                <li><a href="login.html">User</a></li>
+                <li><a href="login.html">Report</a></li>
+                <li><a href="profile.html">Account</a></li>
+                <li> <a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Arta ID Request</h1>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            No
+                        </th>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            Section
+                        </th>
+                        <th>
+                            Remarks
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="no">1</td>
+                        <td>100001</td>
+                        <td>Juan</td>
+                        <td>Dela Cruz</td>
+                        <td>Directors Office</td>
+                        <td class="activities">Entered in ICT room on January 1,2022 at 3:12 pm</th>
+                        <th><button title="Click to View">View</button></th>
+                    </tr>
+                    <tr>
+                        <td class="no">2</td>
+                        <td>100001</td>
+                        <td>Mar Jan</td>
+                        <td>Cristopher</td>
+                        <td>Information and Computer Section</td>
+                        <td class="activities">
+                            Entered in ICT room on January 1,2022 at 3:12 pm 
+                        </td>
+                        <th>
+                            <button title="Click to View">View</button>
+                        </th>
+                    </tr>
+            </table>
+        </div>
+        <div class="pagination">
+            <ul>
+                <li>First Page</li>
+                <li><</li>
+                <li>5</li>
+                <li>></li>
+                <li>Last Page</li>
+            </ul>
+        </div>
+        <!--
+        <h1>Calendar Activity Records</h1>
+        <div class="calendar">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody id="calendayList">
+                    <tr>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                370 Activities
+                            </h1>
+                            <button>View Record</button>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                        <td>
+                            <h1>
+                                1
+                            </h1>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        -->
+    </main>
+    <script src="js/dashboard.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

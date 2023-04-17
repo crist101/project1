@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,300;1,400&family=Ubuntu:ital,wght@0,500;0,700;1,300;1,400;1,500&display=swap')
+
+$colorOne : #5D9C59
+$colorTwo : #C7E8CA
+$colorThree :#DDF7E3
+$colorFour : #dbc07e
+$colorFive : #ca2d2d
+*
+    padding: 0px
+    margin:0px
+    font-family: 'Ubuntu', sans-serif
+    font-size: 17px
+
+body
+    overflow-x: hidden
+    display: flex
+    justify-content: center
+    background: $colorThree
+
+header
+    background: $colorOne
+    position: fixed
+    width: 100vw
+    overflow: hidden
+    height: 70px
+    display: flex
+    justify-content: end
+    z-index: 10
+    .logo
+        position: absolute
+        margin-top: 10px
+        cursor: pointer
+        left: 40px
+        img
+            width: 50px
+            left: 46px
+        #homeButton
+            display: none
+            position: absolute
+            right: 17px
+            font-size: 31px
+            border: 0px solid #FFF
+            background: transparent
+            cursor: pointer
+            padding: 3px 6px
+            border-radius: 4px
+        
+        #homeButton:hover
+            border: .2px solid #FFF
+    nav
+        display: grid
+        place-content: center end
+        margin-right: 40px
+        background: $colorOne 
+        ul
+            display: flex
+            flex-wrap: wrap 
+            gap: 30px
+
+            list-style: none
+            .active
+                border-bottom : .21px solid $colorTwo 
+            li 
+                a
+                    color: $colorThree
+                    text-decoration-line: none
+                    color: black
+                a:hover
+                    cursor: pointer
+                    color: $colorThree
+
+main
+    width: 100%
+    max-width: 1200px
+    padding: 80px 10px 10px 10px
+    background: $colorThree
+    p,ins
+        font-size: 13px
+        margin-bottom: 15px
+    ins
+        cursor: help
+    .search-box
+        margin-top: 20px
+        position: relative
+        max-width: 310px
+        border: .5px solid $colorOne
+        padding: 2px
+        border-radius: 5px
+
+        span
+            position: absolute
+            left: 10px
+            top: 10px
+            font-size: 17px
+            background: $colorThree
+            border-radius: 5px
+            width: 80px
+            cursor: text
+        
+        .span-active
+            top: -10px
+            font-size: 13px
+            padding-left: 13px
+
+
+        input,select
+            padding: 10px
+            border-radius: 5px
+            border: 0px solid $colorThree
+            background: $colorThree
+            outline: none
+
+        button
+            border: 0px solid $colorOne
+            background: $colorThree
+            cursor: pointer
+            position: absolute
+            right: 2px
+            top: 2px
+            padding: 11px 6px
+        button:hover
+            border: 0px solid $colorOne
+
+
+    .table, .calendar
+        overflow-x: auto
+        width: 100%
+        padding: 5px 0px
+        table
+            tbody
+                tr
+                    td
+                        width: 180px
+
+                    .no
+                        text-align: center
+                        width: 40px
+                        a
+                            cursor: pointer
+                            color: $colorOne
+
+                    .activities
+                        width: 400px
+                        text-align: justify
+                        p
+                            margin: 0px !important
+
+                    details
+                            cursor: pointer
+                    th
+                        width: 60px
+                        button
+                            border: 0px solid $colorOne
+                            background: $colorThree
+                            cursor: pointer
+                            animation: all 0.5s ease
+                    td[contenteditable='true']
+                        background: $colorTwo
+                        color: $colorFive
+            tobdy>*
+                font-size: 15px        
+            
+            tfoot
+                tr
+                    td        
+                        ul
+                            display: flex
+                            flex-wrap: wrap
+                            gap: 30px
+                            list-style: none
+                            justify-content: center
+                            align-content: center
+                            text-align: center
+                            padding: 5px 5px
+                            li
+                                padding: 5px 5px
+                                cursor: pointer
+                                border-radius: 8px
+                            li:hover
+                                background: $colorTwo
+                                
+
+    .calendar
+        table
+            tbody
+                tr
+                    td
+                        height: 170px
+                        width: 150px
+                        
+                        h1
+                            font-size: 24px
+                        button
+                            margin-top: 20px
+                            bottom: 10px
+                            right: 10px
+                            background: $colorOne
+                            color: $colorThree
+                            border: 0px solid $colorThree
+                            padding: 5px 10px
+                            border-radius: 3px
+                            cursor: pointer
+    .create-request
+        text-align: right
+        padding-right: 10px
+        a
+            color: $colorOne
+    .pagination
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        justify-content: center
+        align-items: center
+
+        ul
+            display: flex
+            flex-wrap: wrap
+            gap: 30px
+            list-style: none
+            justify-content: center
+            align-content: center
+            text-align: center
+            padding: 5px 5px
+            li
+                padding: 5px 5px
+                cursor: pointer
+                border-radius: 8px
+            li:hover
+                background: $colorTwo
+                            
+                    
+
+
+    table
+        width: 100%
+        min-width: 1000px
+        border-collapse: collapse
+        
+    td,th
+        border: .4px solid $colorOne
+    
+@media screen and (max-width : 700px)
+    .logo
+        left: 0px !important
+        width: 100%
+        display: grid
+        place-content: center
+        
+        #homeButton
+            display: block !important
+    header
+        .open
+            display: grid !important
+        nav
+            display: none
+            width: 100%
+            position: fixed
+            top: 70px
+            left: 0px
+            border-top: .2px solid $colorTwo
+            
+            ul
+                display: block !important
+                width: 100%
+                text-align: right
+                li
+                    padding: 22px 50px
+                    
+                .active
+                    border-bottom : 0px solid $colorTwo  !important
+                    color : $colorFour
+
+    main
+        padding-right: 0px !important
+        padding-left: 0px !important
+        .search-box
+            width: 97%
+            max-width: none
+            input
+                width: -webkit-fill-available
+
