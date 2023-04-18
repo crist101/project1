@@ -3,10 +3,10 @@ $(document).ready(function(){
        $(`#${$(this).attr("for")}`).focus();
        $(this).addClass("span-active");
     });
-    $("input,select").focus(function(){
+    $("input,select,textarea").focus(function(){
         $(`span[for=${$(this).attr("id")}]`).addClass("span-active");
     });
-    $("input,select").focusout(function(){
+    $("input,select,textarea").focusout(function(){
         if($(this).val() == ""){
             $(`span[for=${$(this).attr("id")}]`).removeClass("span-active");
         }

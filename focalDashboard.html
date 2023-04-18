@@ -39,7 +39,7 @@
             <a href="registration.html">Request ID</a>
         </p>
         <div class="table">
-            <table>
+            <table id="requestTable">
                 <thead>
                     <tr>
                         <th>
@@ -69,6 +69,7 @@
                         <td>Juan</td>
                         <td>Dela Cruz</td>
                         <td class="activities">
+                            Kindly wait for response
                         </th>
                         <th>
                             Pending
@@ -76,11 +77,11 @@
                     </tr>
                     <tr>
                         <td class="no">2</td>
-                        <td class="no"><a href="registration.html">100001</a></td>
-                        <td>Mar Jan</td>
-                        <td>Cargo</td>
+                        <td class="no"><a href="updateRegistration.html">100001</a></td>
+                        <td>Mary</td>
+                        <td>Dela Cruz</td>
                         <td class="activities">
-                            <summary>Juan Dela Cruz</summary>
+                            <summary>Maricel De guzman</summary>
                             <p>Kindly change the position of the application</p>
                         </td>
                         <th>
@@ -88,10 +89,10 @@
                         </th>
                     </tr>
                     <tr>
-                        <td class="no">2</td>
-                        <td class="no"><a>100001</a></td>
-                        <td>Mar Jan</td>
-                        <td>Cargo</td>
+                        <td class="no">3</td>
+                        <td class="no"><a  toggle="modal" data-target="view-profile">100001</a></td>
+                        <td>Harry</td>
+                        <td>Caliso</td>
                         <td class="activities">
                             <summary>Ready for printing</summary>
                             <p>
@@ -104,15 +105,15 @@
                         </th>
                     </tr>
                     <tr>
-                        <td class="no">2</td>
-                        <td class="no"><a>100001</a></td>
-                        <td>Mar Jan</td>
-                        <td>Cargo</td>
+                        <td class="no">4</td>
+                        <td class="no"><a toggle="modal" data-target="view-profile">100001</a></td>
+                        <td>Jan jan</td>
+                        <td>Dacusin</td>
                         <td class="activities">
                             <summary>Ready for printing</summary>
                             <p>
                                 <b>Note:</b>
-                                Your request is already approved, But the link we provided is already expired. <a href="#Re-Print">Request for re-printing ID</a>
+                                Your request is already approved, But the link we provided is already expired. <a href="#Re-print" data-target="requestForReporting" toggle="modal">Request for re-printing ID</a>
                             </p>
                         </td>
                         <th>
@@ -121,6 +122,162 @@
                     </tr>
             </table>
         </div>
+    <div class="modal" id="requestForReporting">
+        <div class="content">
+            <div class="header">
+                <button toggle="closeModal">Close</button>
+            </div>
+            <div class="body">
+                <div class="search-box">
+                    <span for="remarks">Remarks</span>
+                    <textarea name="remarks" id="remarks" rows="10"></textarea>
+                </div>
+                <Button>Submit</Button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal" id="view-profile">
+        <div class="content">
+            <div class="header">
+                <button toggle="closeModal">Close</button>
+            </div>
+            <div class="body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                <img src="image/OIP.jpg" alt="Profile">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Employee ID</th>
+                            <td>
+                                1234567
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width:170px">
+                                First Name
+                            </th>
+                            <td>
+                                Harry 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Last Name
+                            </th>
+                            <td>
+                                Caliso
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Position
+                            </th>
+                            <td>
+                                Computer Programmer II
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Office
+                            </th>
+                            <td>
+                                Directors Office
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                Other Details
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Mobile/Telephone No.
+                            </th>
+                            <td>
+                                09121465322
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Date Employed
+                            </th>
+                            <td>
+                                04/13/2022
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Date Issue
+                            </th>
+                            <td>
+                                04/13/2022
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Home Address
+                            </th>
+                            <td>
+                                692 San Andres Malate Manila
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th>
+                                Contact No
+                            </th>
+                            <td>
+                                09124356789
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Date of Birth
+                            </th>
+                            <td>
+                                11/13/1997
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                Person to be contacted in case of emergency
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <td>
+                                Mary Dela Cruz
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Address
+                            </th>
+                            <td>
+                                Same as above
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Mobile/Telephone No.
+                            </th>
+                            <td>
+                                09124356789
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
         <!--
         <div class="pagination" >
             <ul>

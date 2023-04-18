@@ -9,6 +9,18 @@ $(document).ready(function(){
             $(this).attr("toggle","True");
         }
     });
+    
+    $("button[toggle=modal], #list, a[toggle=modal]").on("click","button[toggle=modal],a[toggle=modal]",function(){
+        $(".modal").css("display","grid");
+    });
+    $("a[toggle=modal]").click(function(){
+        $(`#${$(this).attr("data-target")}`).css("display","grid");
+    });
+    $(".modal button[toggle=closeModal]").click(function(){
+        $(".modal").css("display","none");
+    });
+
+    /*
     $("main .table table tbody tr").on("dblclick","td",function(){
         $(this).attr("contenteditable","true")
         console.log($(this).html());
@@ -17,6 +29,7 @@ $(document).ready(function(){
        // $(this).attr("contenteditable","false")
         //console.log("FocusOut");
     });
+    */
     var date = new Date(2023, 3,0)
     var date2 = new Date(2023, 3,1)
     previewCalendar(date.getDate());
@@ -62,7 +75,7 @@ $(document).ready(function(){
 
         function _onInputSearch(e) {
             search_input = e.target;
-            var tables = $("table");
+            var tables = $("#requestTable");
             console.log(tables)
             myArray.forEach.call(tables, function(table) {
                 myArray.forEach.call(table.tBodies, function(tbody) {

@@ -108,7 +108,7 @@ main .search-box .span-active {
   font-size: 13px;
   padding-left: 13px;
 }
-main .search-box input, main .search-box select {
+main .search-box input, main .search-box select, main .search-box textarea {
   padding: 10px;
   border-radius: 5px;
   border: 0px solid #DDF7E3;
@@ -244,6 +244,127 @@ main table {
 }
 main td, main th {
   border: 0.4px solid #5D9C59;
+}
+
+.modal {
+  position: fixed;
+  background: rgba(93, 156, 89, 0.2509803922);
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: none;
+  place-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.modal .content {
+  width: 90vw;
+  height: 100%;
+  background: white;
+  max-width: 800px;
+  min-height: 500px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+.modal .content .header {
+  text-align: right;
+}
+.modal .content .header button {
+  margin: 10px;
+  color: #5D9C59;
+  padding: 3px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.modal .content .header button:hover {
+  color: #dbc07e;
+}
+.modal .content .body .search-box {
+  margin-top: 20px;
+  position: relative;
+  max-width: 310px;
+  border: 0px solid #5D9C59;
+  padding: 10px;
+  border-radius: 5px;
+}
+.modal .content .body .search-box span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 17px;
+  background: #DDF7E3;
+  border-radius: 5px;
+  width: 80px;
+  cursor: text;
+}
+.modal .content .body .search-box .span-active {
+  top: -2px;
+  font-size: 13px;
+  padding-left: 13px;
+}
+.modal .content .body .search-box textarea {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px solid #DDF7E3;
+  background: #DDF7E3;
+  outline: none;
+}
+.modal .content .body button {
+  border: 0px solid #dbc07e;
+  padding: 5px 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.modal .content .body table {
+  width: 100%;
+  min-width: fit-content !important;
+  border-collapse: collapse;
+}
+.modal .content .body textarea {
+  resize: none;
+}
+.modal .content .body table tbody tr td, .modal .content .body table tbody tr th, .modal .content .body tr tbody tr td, .modal .content .body tr tbody tr th, .modal .content .body td tbody tr td, .modal .content .body td tbody tr th, .modal .content .body th tbody tr td, .modal .content .body th tbody tr th {
+  border: 1px solid #5D9C59;
+  padding-left: 10px;
+}
+.modal .content .body table tbody th, .modal .content .body tr tbody th, .modal .content .body td tbody th, .modal .content .body th tbody th {
+  font-weight: 600;
+  text-align: left;
+}
+.modal .content .body table img, .modal .content .body tr img, .modal .content .body td img, .modal .content .body th img {
+  width: 2in;
+  height: 2in;
+  border: 3px solid #e4b243;
+}
+.modal .content .body table tfoot, .modal .content .body tr tfoot, .modal .content .body td tfoot, .modal .content .body th tfoot {
+  padding: 0px;
+  margin: 0px;
+}
+.modal .content .body table tfoot .remarks, .modal .content .body tr tfoot .remarks, .modal .content .body td tfoot .remarks, .modal .content .body th tfoot .remarks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.modal .content .body table tfoot p, .modal .content .body tr tfoot p, .modal .content .body td tfoot p, .modal .content .body th tfoot p {
+  color: #5D9C59;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.modal .content .body table tfoot textarea, .modal .content .body tr tfoot textarea, .modal .content .body td tfoot textarea, .modal .content .body th tfoot textarea {
+  resize: none;
+  max-width: 400px;
+  display: block;
+  color: #5D9C59;
+  padding: 3px;
+}
+
+#requestForReporting .content {
+  max-width: 342px !important;
+  min-height: 361px !important;
 }
 
 @media screen and (max-width: 700px) {

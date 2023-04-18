@@ -24,6 +24,9 @@ $(document).ready(function(){
         }
     });
 
+    var today = new Date(Date.now())
+    renderCountdown(today,new Date("Tue Apr 18 2023 09:27:07 GMT+0800"))
+
     function renderCountdown(dateStart, dateEnd){
 
         console.log(dateStart, dateEnd); 
@@ -43,7 +46,14 @@ $(document).ready(function(){
             secondsLeft %= 86400;
             hours = pad( Math.floor( secondsLeft / 3600 ) );
             secondsLeft %= 3600;
-            minutes = pad( Math.floor( secondsLeft / 60 ) );
+            minutes = Math.floor( secondsLeft / 60 ) 
+            if(minutes < 0){
+                $("body").html(`
+                <div class="printcard">
+                    The link we provide is already expired please request for re-printing id.
+                </div>`)
+            }
+            minutes = pad(minutes );
             seconds = pad( Math.floor( secondsLeft % 60 ) );
             // format countdown string + set tag value
             $("#timer h1").html(minutes+":"+seconds)
@@ -54,6 +64,4 @@ $(document).ready(function(){
         getCountdown();
         setInterval(function () { getCountdown(count++ ); }, 1000);
     }
-    
-    renderCountdown(new Date("Sat Dec 19 2015 11:42:04"),new Date("Sat Dec 19 2015 11:50:04") )
 });

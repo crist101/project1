@@ -31,8 +31,8 @@
   background: #fff;
 }
 .card .preview .finishing {
-  height: 100%;
-  width: 100%;
+  height: 101%;
+  width: 100vw;
   position: absolute;
   z-index: 1000;
 }
