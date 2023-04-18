@@ -247,6 +247,7 @@ main td, main th {
 }
 
 .modal {
+  z-index: 1000;
   position: fixed;
   background: rgba(93, 156, 89, 0.2509803922);
   top: 0px;
