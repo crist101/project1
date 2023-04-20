@@ -25,7 +25,7 @@ $(document).ready(function(){
     });
 
     var today = new Date(Date.now())
-    renderCountdown(today,new Date("Tue Apr 18 2023 09:27:07 GMT+0800"))
+    renderCountdown(today,new Date("Tue Apr 19 2023 11:06:07 GMT+0800"))
 
     function renderCountdown(dateStart, dateEnd){
 
